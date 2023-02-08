@@ -1,0 +1,36 @@
+.imageCd {
+    width: 350px;
+}
+.dashboard {
+    width: 390px;
+    height: 550px;
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+}
+.progress {
+    cursor: pointer;
+}
+.player {
+    width: 100%;
+    display: inline-block;
+    text-align: -webkit-center;
+}
+.progress {
+    width: 100%;
+}
+
+.paintGreen {
+    color: rgb(6, 46, 223);
+        -webkit-transition: color 1s ease-out;
+        transition: color 0.05s ease-out;
+}
+
+#firtLyricBefore{
+    font-weight: bolder;
+    font-size: small;
+}
+
+#secondLyricAfter {
+    font-size: smaller;
+}
