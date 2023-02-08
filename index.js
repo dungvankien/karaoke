@@ -108,8 +108,6 @@ fetch(page.urls.getLyric).then((response) => {
         let lyrics = xmlDOM.querySelectorAll("data");
         lyrics.forEach(lyricsXmlParam => {
             for (let i = 0; i < lyricsXmlParam.children.length; i++) {
-                let lyricsBefore = '';
-                let lyricsAfter = '';
                 let sizeParam = lyricsXmlParam.children[i].getElementsByTagName('i').length;
                 let lyricsParam = new LyricParam();
                 var lyricsChart = [];
@@ -201,7 +199,7 @@ page.commands.renderChangeProgress = (i) => {
                         paramChartFirst += `<span>&nbsp</span> `;
                     } else {
                         if (+(timeSlow.toFixed(2)) < +(audio.currentTime.toFixed(2))) {
-                            paramChartFirst += `<span id="${timeSlow.toFixed(2)}" class="paintRed">${lyricsAudio[i].lyricsParam[j].chartLyric[k]}</span> `;
+                            paramChartFirst += `<span id="${timeSlow.toFixed(2)}" class="paintGreen">${lyricsAudio[i].lyricsParam[j].chartLyric[k]}</span> `;
                         } else {
                             paramChartFirst += `<span id="${timeSlow.toFixed(2)}">${lyricsAudio[i].lyricsParam[j].chartLyric[k]}</span> `;
                         }
@@ -221,7 +219,7 @@ page.commands.renderChangeProgress = (i) => {
                         paramChartFirst += `<span id="${timeSlow.toFixed(2)}">&nbsp</span> `;
                     } else {
                         if (+(timeSlow.toFixed(2)) < +(audio.currentTime.toFixed(2))) {
-                            paramChartFirst += `<span id="${timeSlow.toFixed(2)}" class="paintRed">${lyricsAudio[i].lyricsParam[j].chartLyric[k]}</span> `;
+                            paramChartFirst += `<span id="${timeSlow.toFixed(2)}" class="paintGreen">${lyricsAudio[i].lyricsParam[j].chartLyric[k]}</span> `;
                         } else {
                             paramChartFirst += `<span id="${timeSlow.toFixed(2)}">${lyricsAudio[i].lyricsParam[j].chartLyric[k]}</span> `;
                         }
@@ -235,7 +233,7 @@ page.commands.renderChangeProgress = (i) => {
             paramChartFirst += lyricsAudio[i - 1].lyricsParam[j].chartLyric;
         }
         $("#firtLyricBefore").replaceWith(`<p id='firtLyricBefore'>${paramChartFirst}</p>`);
-        document.getElementById("firtLyricBefore").classList.add("paintRed");
+        document.getElementById("firtLyricBefore").classList.add("paintGreen");
     }
     if (lyricsAudio[i + 1] != undefined) {
         for (let j = 0; j < lyricsAudio[i + 1].lyricsParam.length; j++) {

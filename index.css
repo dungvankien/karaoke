@@ -20,12 +20,6 @@
     width: 100%;
 }
 
-.paintGreen {
-    color: rgb(6, 46, 223);
-        -webkit-transition: color 1s ease-out;
-        transition: color 0.05s ease-out;
-}
-
 #firtLyricBefore{
     font-weight: bolder;
     font-size: small;
@@ -33,4 +27,10 @@
 
 #secondLyricAfter {
     font-size: smaller;
+}
+
+.paintGreen {
+    color: rgb(6, 46, 223);
+        -webkit-transition: color 1s ease-out;
+        transition: color 0.05s ease-out;
 }
